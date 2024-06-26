@@ -1,0 +1,13 @@
+{% extends 'cursos/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h1 class="mb-4">Confirmar Exclusão de Curso</h1>
+        <p>Tem certeza de que deseja deletar o curso "{{ curso.titulo }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Deletar</button>
+            <a href="{% url 'curso_list' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+{% endblock content %}

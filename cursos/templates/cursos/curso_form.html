@@ -1,0 +1,15 @@
+{% extends 'cursos/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h1 class="mb-4">{{ form.instance.pk|yesno:"Editar Curso,Adicionar Novo Curso" }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="{% url 'curso_list' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+{% endblock content %}

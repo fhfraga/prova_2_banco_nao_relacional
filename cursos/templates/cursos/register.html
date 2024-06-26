@@ -1,0 +1,17 @@
+{% extends 'cursos/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>Registrar</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrar</button>
+    </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+

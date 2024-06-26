@@ -24,5 +24,5 @@ $ uvicorn main:app --reload
 ```
 
 # Programa em utilização
-Neste [Link]() há um vídeo com o funcionamento do projeto.
+Neste [Link](https://www.youtube.com/watch?v=XRP4PmsqbPM) há um vídeo com o funcionamento do projeto.
 
